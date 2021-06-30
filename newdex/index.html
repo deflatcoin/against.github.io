@@ -672,12 +672,7 @@ Total: <input type="number" step="any" id="totalBuyValue"  onkeyup="calcRateBuy(
       document.getElementById("btnSell").disabled = true;
       document.getElementById("btnSell").style.background = 'silver'; 
       document.getElementById("btnBuy").disabled = true;
-      document.getElementById("btnBuy").style.background = 'silver';
-      let web3
-      if(typeof window !== 'undefined' && typeof window.web3 !== 'undefined'){
-         //We are in the browser and metamask is running
-         web3 = new Web3(window.web3.currentProvider);
-      }	    
+      document.getElementById("btnBuy").style.background = 'silver';   
       if (window.ethereum) {
         window.web3 = new Web3(ethereum);
         try {
