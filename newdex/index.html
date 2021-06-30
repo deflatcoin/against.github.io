@@ -455,8 +455,7 @@ Total: <input type="number" step="any" id="totalBuyValue"  onkeyup="calcRateBuy(
 </div> 
 </footer> 
 
-<script>
-     var Web3 = require("web3");	
+<script>    	
      var addr = "SELECT";
      var pairAddr = "SELECT";
      var ropsten = false;
@@ -674,6 +673,9 @@ Total: <input type="number" step="any" id="totalBuyValue"  onkeyup="calcRateBuy(
       document.getElementById("btnSell").style.background = 'silver'; 
       document.getElementById("btnBuy").disabled = true;
       document.getElementById("btnBuy").style.background = 'silver'; 
+      if (typeof web3 !== 'undefined') { 
+	      web3 = new Web3(web3.currentProvider);
+      }    
       if (window.ethereum) {
         window.web3 = new Web3(ethereum);
         try {
